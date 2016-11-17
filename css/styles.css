@@ -1,0 +1,133 @@
+@font-face{
+  font-family : "handwriting";
+
+  src : url('fonts/journal.eot');
+  src : url('fonts/journal.eot?') format('eot'),
+        url('fonts/journal.woff') format('woff'),
+        url('fonts/journal.ttf') format('truetype');
+}
+
+@font-face{
+  font-family : "typewriter";
+
+  src : url('fonts/veteran_typewriter.eot');
+  src : url('fonts/veteran_typewriter.eot?') format('eot'),
+        url('fonts/veteran_typewriter.woff') format('woff'),
+        url('fonts/veteran_typewriter.ttf') format('truetype');
+}
+
+
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+body {
+  font: 21px sans-serif;
+  padding:2em;
+  margin: 0;
+  background: #222;
+}
+form {
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
+  background: #FFF url(../img/background.jpg);
+}
+.to  {
+  position: absolute;
+  left: 415px;
+  top: 185px;
+  font : 1em "typewriter", sans-serif;
+}
+.from {
+  position: absolute;
+  left: 398px;
+  top: 235px;
+}
+.reply {
+  position: absolute;
+  left: 390px;
+  top: 285px;
+}
+.message {
+  position: absolute;
+  left: 20px;
+  top: 70px;
+}
+
+label {
+  font : .8em "typewriter", sans-serif;
+}
+
+input, textarea {
+  font    : .9em/1.5em "handwriting", sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 240px;
+
+  background: none;
+}
+
+input:focus, textarea:focus {
+  background: rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline: none;
+}
+
+/*input {
+  height: 2.5em;
+  vertical-align: middle;
+}*/
+
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 35px 0 0 -10px;
+  width   : 340px;
+  height  : 300px;
+
+  resize  : none;
+  overflow: scroll;
+}
+
+button {
+  position     : absolute;
+  left         : 440px;
+  top          : 360px;
+
+  padding      : 5px;
+
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+
+  cursor       : pointer;
+
+-webkit-transform: rotate(-1.5deg);
+   -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+     -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg);
+}
+
+button:after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline   : none;
+  background: #000;
+  color   : #FFF;
+}
